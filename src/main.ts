@@ -1,10 +1,9 @@
-import 'reflect-metadata';
-import express from 'express';
+import express, { Request, Response } from 'express';
 
 const app = express();
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.json({ status: 'ok', message: '订单记账系统 API' });
 });
 
